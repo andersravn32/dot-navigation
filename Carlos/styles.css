@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+:root {
+  --first: hsl(240, 44%, 10%);
+  --second: hsl(240, 44%, 20%);
+  --third: hsl(240, 44%, 30%);
+  --fourth: hsl(240, 44%, 40%);
+  --fifth: hsl(240, 44%, 50%);
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 35vh;
+  right: 10px;
+}
+.circle {
+  width: 26px;
+  height: 26px;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.25s linear;
+}
+.circle:hover {
+  background-color: white;
+}
+.active {
+  background-color: white;
+}
+
+/* Sections */
+.section {
+  width: 100%;
+  min-height: 100vh;
+}
+.one {
+  background-color: var(--first);
+}
+.two {
+  background-color: var(--second);
+}
+.three {
+  background-color: var(--third);
+}
+.four {
+  background-color: var(--fourth);
+}
+.five {
+  background-color: var(--fifth);
+}
