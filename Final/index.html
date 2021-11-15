@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dot-navigation | Group 4</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fto0trn.css">
+</head>
+<body>
+    <nav>
+
+    </nav>
+
+
+    <section class="scroll">
+        <h1>dot-navigation</h1>
+        <p>An easy to follow tutorial on making a dot-navigation using vanilla JavaScript.</p>
+    </section>
+
+    <section class="scroll">
+        <h2>First of all</h2>
+        <p>We are going to be making an interactive navigation bar, based on vanilla JavaScript. It is the navigation bar displayed on the right.<br>The navigation bar is dynamic, it can navigate between sections, and it creates new
+             navigation dots based on how many sections you are adding.</p>
+        <p>It will be based on the HTML & CSS included in the zip file below.</p>
+        <a href="assets.zip" download>Download</a>
+        <p>To begin with, the concepts you should know before starting is:<br>
+            <a href="https://www.w3schools.com/js/js_variables.asp" target="_blank">Variables</a><br>
+            <a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank">The DOM</a><br>
+            <a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank">For loops</a><br>
+            <a href="https://www.w3schools.com/js/js_arrays.asp" target="_blank">Arrays</a><br>
+        </p>
+        <p>Lets get started.</p>
+    </section>
+
+    <section class="scroll">
+        <h2>Declaring the values we need.</h2>
+        <p>First we start out by declaring two variables for storing the sections and the navigation container.<br>
+            This is done by using the query selector, and the query selector all.
+        </p>
+        <img src="images/declare.png" alt="Declare">
+    </section>
+
+    <section class="scroll">
+        <h2>Creating the individual dots.</h2>
+
+        <p>This next part is focused on creating the dots based on the amount of sections, aswell as assigning the active 
+            class to one of the dots.<br>
+            The code is complicated at first glance, that is why we are breaking it down in smaller pieces.<br>
+            First things first, everything is happening within a for loop, so it will run multiple times.
+        </p>
+        <img src="images/create1.png" alt="Create 1">
+
+        <p>Next up we are creating a div element in the HTML code, and assign it with the <b>dot</b> class.</p>
+        <img src="images/create2.png" alt="Create 2">
+
+        <p>We are then checking whether each dot is the first dot on the loaded page. <br>This is done by comparing the Y-coordinate of each section to 0, and then adding the <b>active</b> class to the first section, if this is true. The Y-coordinate is gotten by utilizing the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect" target="_blank"><b>getBoundingClientRect</b></a></p>
+        <img src="images/create3.png" alt="Create 3">
+
+        <p>Next we are adding an eventListener to each circle to act as a link to each section. This is done by utilizing the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView" target="_blank"><b>scrollIntoView</b></a> method.</p>
+        <img src="images/create4.png" alt="Create 4">
+
+        <p>Lastly we are appending the circle which we have created to the navigation container, which is stored in the <b>nav</b> variable.</p>
+        <img src="images/create5.png" alt="Create 5">
+    </section>
+
+    <section class="scroll">
+        <h2>Creating function for controlling state of the individual dot.</h2>
+        <p>We are now creating a function that takes a parameter, to change the state of the dot to and from active.<br>
+        This is done by using another for loop. This loop removes the active class from every dot, and then adds the active class back to the dot specified using the parameter.</p>
+        <img src="images/fill.png" alt="Fill">
+    </section>
+
+    <section class="scroll">
+        <h2>Handling the scroll event.</h2>
+        <p>This is the primary event which makes the whole application work. This event fires every time the document is scrolling, this then triggers yet another for loop.<br>This loop runs the same check as the loop in the beginning, checking whether or not a section is visible or not, based on the Y-coordinate minus the height of the window divided by 2.</p>
+        <img src="images/scroll.png" alt="Scroll">
+        <p>When you have finished you can compare your own solution to the one we made for this page!<br>
+        It can be downloaded <a href="script.js" download>here</a>.</p>
+    </section>
+</body>
+</html>
